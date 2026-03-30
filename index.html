@@ -4,9 +4,16 @@
     <title>Book Finder</title>
 </head>
 <body>
-    <h1>Book Finder App</h1>
-    <p id="loading" style="display:none;">Loading...</p>
-    <button onclick="searchBooks()">Search</button>
+    <div class="container">
+        <h1>📚 Book Finder App</h1>
+
+        <input type="text" id="searchInput" placeholder="Search books...">
+        <button onclick="searchBooks()">Search</button>
+
+        <p id="loading" style="display:none;">Loading...</p>
+
+        <div id="results"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
