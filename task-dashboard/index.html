@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Priority Dashboard</title>
+    <meta name="description" content="A modern task priority dashboard built with vanilla JavaScript, demonstrating map, filter, sort, async/await, and DOM manipulation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <!-- Header -->
+        <header id="app-header">
+            <div class="header-left">
+                <h1>⚡ TaskFlow</h1>
+                <span class="badge" id="task-count">0 tasks</span>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </header>
+
+        <!-- Toolbar -->
+        <section id="toolbar" class="toolbar">
+            <div class="filter-group">
+                <button class="filter-btn active" data-priority="all">All</button>
+                <button class="filter-btn" data-priority="high">🔴 High</button>
+                <button class="filter-btn" data-priority="medium">🟡 Medium</button>
+                <button class="filter-btn" data-priority="low">🟢 Low</button>
+            </div>
+            <div class="sort-group">
+                <button id="sort-date-btn" class="sort-btn">📅 Sort by Date ↑</button>
+            </div>
+        </section>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading-state">
+            <div class="spinner"></div>
+            <p>Fetching your tasks...</p>
+        </div>
+
+        <!-- Task Container -->
+        <main id="task-container" class="task-grid">
+            <!-- Task cards will be injected here -->
+        </main>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state" style="display: none;">
+            <p>🔍 No tasks match this filter.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
