@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ===================== */
 /*   CSS Variables        */
 /* ===================== */
@@ -421,3 +422,13 @@ body.dark-mode .favorite-btn.active {
         flex-direction: column;
     }
 }
+=======
+body {
+  font-family: Arial;
+}
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+>>>>>>> 5e30dfe0d9e99a5e755a5a7f14426d63a0b87074
